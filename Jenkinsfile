@@ -22,14 +22,14 @@ pipeline {
         }
         stage("Approval"){
             steps {
-                timeout(time: 1, unit: 'MINUTES') {
-                        input "Approve"
+                timeout(time: 1, unit: 'MINUTES') { // timeout 설정
+                        input "Approve"     // Approval 설정 
                     }
             }
         }
         stage("Deploy"){
             steps {
-                sh 'deploy has been succeed'
+                sh 'echo "deploy has been succeed"'
             }
         }
     }
