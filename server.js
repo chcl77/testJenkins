@@ -7,9 +7,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/hello', (req, res) => {
-    res.send("this is for hello")
+    res.send('this is for hello');
 });
 
-app.listen(3000, () => {
-    console.log('server is listening to 3000');
-});
+if (require.main === module) {
+    app.listen(3000, () => {
+        console.log('server is listening to 3000');
+    });
+}
+
+module.exports = app;

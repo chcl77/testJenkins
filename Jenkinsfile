@@ -11,11 +11,10 @@ pipeline {
             }
             steps {
                 sh """
-                    echo "this is test" 
+                    echo "this is test and build trigger" 
                     ls -la 
                     node --version
                     npm ci 
-                    npm run build 
                     ls -la
                 """
             }
